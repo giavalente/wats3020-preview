@@ -1,0 +1,245 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* Put borders around divs to see spacing 
+div {
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+}*/
+
+/* Navbar styling */
+.navbar-inverse {
+   background-color: #F9BA32;
+   width: 1199px;
+}
+/* Center navbar on page */
+.navbar .navbar-nav {
+  display: inline-block;
+  float: right;
+  vertical-align: top;
+  font-size: 20px;
+}
+.navbar-brand {
+  padding-left: 20px;
+  font-size: 30px;
+}
+
+/* Body padding to clear content of fixed navbar */
+body { 
+  padding-top: 70px; 
+}
+
+/* Set page size */
+.jumbotron {
+  width: 1199px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  }
+div.container {
+  width: 100%;
+  margin: 0px auto;
+  padding: 0px;
+}
+h2, .quote {
+  margin: 0px auto;
+  text-align: center;
+}
+#splash {
+  position: relative;
+}
+img.full-size .image {
+  width: 99%;
+  position: absolute;
+}
+div.welcome {
+  position: absolute; 
+  top: 40%;
+  width: 100%; 
+  margin: 0px auto;
+  text-align: center;
+}
+.our-soups {
+  background-color: #769346;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 5px;
+}
+.row {
+  padding-bottom: 10px;
+  padding-top:10px;
+}
+#markets {
+  padding-top: 40px;
+  background-color: #769346;
+ 
+}
+/* Set height for map */
+#map-container { 
+  height: 380px; 
+  width: 90%;
+  margin-bottom: 20px;
+  left: 5%;
+  right: 5%;
+}
+.tab-content {
+  background-color: #F9BA32;
+  padding: 2%;
+}
+ul {
+  list-style-type: none;
+}
+#inventory {
+  background-color: #F9BA32;
+  text-align: center;
+  padding: 2%;
+  padding-right: 2%;
+}
+#order-form {
+  background-color: #769346;
+  padding-top: 2%;
+}
+#about {
+ background-color: #769346; 
+}
+#farms {
+  text-align: center;
+  padding: 4%;
+  font-size: 18px;
+}
+p.quote {
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+/* Order form styling for validation */
+/* Red background for page-warning */
+p.lead {
+  background: #f2dede;
+}
+/* Red styling for error messages */
+ label.error {
+  color: #a94442;
+  border-color: #ebccd1;
+}
+/* Red styling for error field background */
+ input.error {
+  background: #f2dede;
+  border-color: #a94442;
+}
+
+/* Green styling for valid fields */
+ input.valid {
+  background: #CCE5C7;
+  border-color: #4A823F;
+}
+
+/* Align Success button on order form */
+.btn-success {
+  float: right;
+  margin-right: 20px;
+}
+
+fieldset {
+  margin-right: 15%;
+}
+
+/* Set footer size */
+footer {
+  width: 1199px;
+  background-color: #AA382E;
+  color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+}
+
+/* The resolution breakpoints we will use for these four sizes are the default Bootstrap breakpoints:
+
+Extra Small (xs): less than 768px wide (phones)
+Small (sm): 768px to 991px wide (tablets)
+Medium (md): 992px to 1199px wide (desktops)
+Large (lg): 1200px or more wide (televisions, large desktops, etc.) */
+
+/* Mobile responsive size breaks */
+  @media (max-width: 450px){
+  .navbar-inverse {
+    width: 450px;
+  }
+  .jumbotron {
+    width: 450px;
+  }
+   img {
+    width: 450px;
+  }
+    footer {
+    width: 450px;
+  }
+}
+  @media (min-width: 451px) and (max-width: 678px) {
+  .navbar-inverse {
+    width: 100%;
+  }
+  .jumbotron {
+    width: 100%;
+  }
+    img {
+    width: 100%;
+  }
+    footer {
+    width: 100%;
+  }
+}
+  @media (min-width: 679px) and (max-width: 991px) {
+   .navbar-inverse {
+    width: 100%;
+  }
+  .jumbotron {
+    width: 100%;
+  }
+    img {
+    width: 100%;
+  }
+    footer {
+    width: 100%;
+  }
+}
+  @media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-inverse {
+    width: 100%;
+  }
+  .jumbotron {
+    width: 100%;
+  }
+    img {
+    width: 100%;
+  }
+    footer {
+    width: 100%;
+  }
+}
+  @media (min-width: 1200px) {
+  .navbar-inverse {
+    width: 1198px;
+    margin: 0px auto;
+  }
+  .jumbotron {
+    width: 1198px;
+    margin: 0px auto;
+  }
+    img {
+    width: 1198px;
+  }
+    footer {
+    width: 1198px;
+    margin: 0px auto;
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,299 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Got Soup?</title>
+        <meta name="description" content ="A product page for educational purposes."
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+        <link rel="stylesheet" href="css/main.css">
+                                                                  
+      <!-- leaflet CSS and JS file -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /> 
+      <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+      <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+  
+  
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+   <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+   <a class="navbar-brand text-muted" href="#">Got Soup?</a>
+   <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+             <li><a href="#markets">Farmer's Markets</a></li>
+             <li><a href="#delivery">Delivery</a></li>
+             <li><a href="#about">About Us</a></li>
+             <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+   <div class="jumbotron">
+     <div class="container">
+       <div id="splash">
+       <img src="img/cuttingboard.jpg" alt="cutting board" class="full-size">
+       <div class="welcome">
+         <h1 id="home">Got Soup?</h1> 
+        <p class="quote" id="home">Fresh, local, and organic ingredients!</p>
+       </div>
+       </div>
+        
+  <!-- Based on "Why Got Soups" section, Bootstrap styled to stack on mobile -->
+    <div class="our-soups">
+      <h2>Our Soups</h2>
+  <div class="row">
+  <div class="col-xs-12 col-sm-6"><span class="glyphicon glyphicon-heart-empty"></span> Always fresh and made from local, organic ingredients.</div>
+  <div class="col-xs-12 col-sm-6"><span class="glyphicon glyphicon-leaf"></span> Support local farmers and sustainable farming.</div>
+  <div class="col-xs-12 col-sm-6"><span class="glyphicon glyphicon-time"></span> A quick nutritious dinner or lunch for you and your family.</div>
+  <div class="col-xs-12 col-sm-6"><span class="glyphicon glyphicon-calendar"></span> Over 20 delicious varieties rotating weekly.</div>
+  </div>
+    </div>
+       
+   <!-- Image -->
+    <div class="image">
+      <img src="img/basil.jpg" alt="basil">
+    </div>
+      
+   <!-- Farmer's markets map and weekly menu -->
+    <div id="markets">
+      <h2>Farmer's Markets</h2>
+      <p class="quote">
+        "We serve our soups fresh at four Seattle Farmer's Markets weekly."
+      </p>
+       <div id="map">
+            <!-- map-container for Leaflet.js to add a map showing Mt. Rainier's location http://leafletjs.com/examples/quick-start.html -->
+            <div id="map-container"></div>
+            <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+       </div>
+  
+   <!-- HTML structure to trigger the Bootstrap tabs feature -->
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#menu" aria-controls="menu" role="tab" data-toggle="tab">This Week's Soups</a></li>
+  <li role="presentation"><a href="#history" aria-controls="history" role="tab" data-toggle="tab">Last Week's Soups</a></li>
+</ul>
+       
+   <!-- Tab panes -->
+  <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="menu">
+          <h2>This Week's Soups</h2>
+          <ul>
+            <li>Brussels Fazole-Vegetarian $12</li>
+                <ul><li><em>Tomatoes, onions, brussel sprout, white bean, GF pasta, fennel, celery, garlic, parmesan cheese, lemon, parsley, thyme, rosemary, sage.</em></li></ul>
+            <li>Coconut Curry with Chicken and Brown Rice $13 </li>
+                <ul><li><em>Onions, carrots, celery, mushrooms, red peppers, brown rice, coconut milk, chicken, garlic, ginger, cilantro, lemongrass, gagangal, curry powder, red curry, paprika, turmeric.</em></li></ul>
+            <li>Cream of Mushroom w/ Wild Rice-Vegan $12</li>
+                <ul><li><em>Mushrooms, onions, leeks, celery, wild rice, cashew, coconut milk, parsley, thyme, rosemary.</em></li></ul>
+          </ul>
+      </div>
+    
+      <div role="tabpanel" class="tab-pane" id="history">
+          <h2>Last Week's Soups</h2>
+          <ul>
+            <li>Red Curry Squash and Basil-Vegan $12</li>
+                <ul><li><em>Coconut milk, squash, onions, red curry, ginger, basil, cilantro, parsley, tamarind.</em></li></ul>
+            <li>Vegetable Chili and Cheese-Vegetarian $12</li>
+                <ul><li><em>Onions, tomatoes, white bean, sweet potato, green peppers, celery, mushrooms, squash, cheddar, garlic, dried peppers, cumin, cilantro, parsley, marjoram.</em></li></ul>
+            <li>Spicy Broccoli and Red Lentil-Vegan $12</li>
+                <ul><li><em>Broccoli, red lentil, onions, tomatoes, coconut milk, garlic, ginger, cilantro, tamarind, turmeric, cumin, coriander, smoked paprika, cinnamon, nutmeg, cayenne.</em></li></ul>
+          </ul>
+      </div>
+   </div>
+</div> 
+    
+  <!-- Image -->
+    <div class="image">
+      <img src="img/soups.jpg" alt="soup in cups" class="full-size">
+    </div>
+      
+  <!-- Delivery section -->
+<div id="delivery">
+ <div id="inventory">
+  <h2>Delivery</h2>  
+  <br><h3 class="quote">This Week's Delivery Menu</h3>
+  <ul id="inventory">
+    <li>Caramelized Onion and Apple Braised Cabbage $12
+    <li>Carnitas Soup $13</li>
+    <li>Carrot with Green Curry $12</li>
+    <li>Cassoulet $13</li>
+    <li>Chicken and Andouille Gumbo $13</li>
+    <li>Chicken and Apricot Masala $13</li>
+    <li>Chorizo Sweet Potato and Kale $13</li>
+    <li>Coconut Curry with Chicken and Brown Rice $13</li>
+    <li>Coconut Red Lentil Dal $12</li>
+    <li>Coq au Vin $13</li>
+    <li>Green Lentil Dal $12</li>
+    <li>Indian Pea with Coconut Chai $12</li>
+    <li>Mushroom and Swiss $12</li>
+    <li>Northwest Chowder $13</li>
+    <li>Orange and Cumin Sweet Potato $12</li>
+    <li>Red Curry Squash and Basil $12</li>
+    <li>Shrimp Etouffee $13</li>
+    <li>Spicy Broccoli and Red Lentil $12</li>
+    <li>Spicy Tomato and Chickpea $12</li>
+    <li>Sweet Potato and Peanut $13</li>
+    <li>Thai Peanut and Chicken $13</li>
+    <li>Thai Style Pumpkin and Coconut $12</li>
+    <li>Vegetable Chili and Cheese $12</li>
+   </ul>    
+   </div>
+  <!-- Order Form Validation -->
+  <div id="order-form">
+    <h2>Order For Delivery</h2>
+  <!-- Begin form -->
+    <p class="quote"><span class=" glyphicon glyphicon glyphicon-exclamation-sign"></span> Please note: This form is only for demonstration purposes. <br>Do not enter real payment information; please use imaginary data!</p>
+      <form class="form-horizontal" role="form" action="thank-you.html" method="get" id="order-form" data-toggle="validator">
+        <fieldset>
+          <legend>Your Information</legend>
+          <div class="form-group required">
+            <label class="col-sm-3 control-label" for="your-name"><span class="glyphicon glyphicon-question-sign" title="Your first and last name."></span>Your Name</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="your-name" id="your-name" placeholder="Your Name" required>
+            </div>
+            <!-- Make validation for name according to these rules:
+                 * Name must be fewer than 128 characters.
+                 * Name may not contain any numbers.
+                 -->
+          </div>
+          <div class="form-group required">
+            <label class="col-sm-3 control-label" for="email"><span class="glyphicon glyphicon-question-sign" title="Your email address."></span>Email</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="email" id="email" placeholder="Email" required>
+            </div>
+            <!-- Make validation for email according to these rules:
+                 * Must be an email address
+                 -->
+          </div>
+          <div class="form-group required">
+            <label class="col-sm-3 control-label" for="phone"><span class="glyphicon glyphicon-question-sign" title="Your phone number."></span>Phone</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone number" required>
+            </div>
+            <!-- Make validation for phone according to these rules:
+                 * Must be 10 digits
+                 * Digits only
+                 -->
+          </div>
+          <div class="form-group required">
+            <label class="col-sm-3 control-label" for="your-address"><span class="glyphicon glyphicon-question-sign" title="Street Address for Delivery, must be in Seattle, WA."></span>Delivery Address</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="your-address" id="your-address" placeholder="Street Address in Seattle, WA" required>
+            </div>
+            <!-- Make validation for street address according to these rules:
+                  * Field must not be blank
+                  -->
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="your-address2">Apartment # or Suite</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="your-address2" id="your-address2" placeholder="Street Address (additional)">
+            </div>
+          </div>
+          <div class="form-group required">
+            <label class="col-sm-3 control-label" for="your-zip"><span class="glyphicon glyphicon-question-sign" title="US ZIP code only."></span> ZIP</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="your-zip" id="your-zip" placeholder="Your ZIP Code" required>
+            </div>
+            <!-- Make validation for ZIP according to these rules:
+                  * Field must not be blank
+                  * Field must be an integer (only whole numbers)
+                  * Field must have at least 5 digits
+                  -->
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Order</legend>
+          <div class="form-group required">
+            <label class="col-sm-3 control-label" for="soup-choice">Soup Order from This Week's Menu</label>
+            <div class="col-sm-9">
+              <textarea cols="80" rows="6" class="form-control" name="soup-choice" id="soup-choice" placeholder="Soup Order"></textarea>
+            </div>
+            <!-- Make validation for Soup Order according to these rules:
+                  * Field may not be blank
+                  * Field may contain any characters
+                  -->
+          </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="comments">Special Instructions</label>
+            <div class="col-sm-9">
+              <textarea cols="80" rows="6" class="form-control" name="comments" id="comments" placeholder="Special Instructions"></textarea>
+            </div>
+            <!-- Make validation for Special Instructions according to these rules:
+                  * Field may be blank
+                  * If field is not blank, it must be less than 500 characters.
+                  * Field may contain any characters
+                  -->
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+              <button type="submit" class="btn btn-success"> <span class="glyphicon glyphicon-shopping-cart"></span> Check Out!</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    
+
+  </div>
+</div>
+     <!-- Image -->
+    <div class="image">
+      <img src="img/farm.jpg" alt="farm" class="full-size">
+    </div>
+      
+     <!-- About Us -->
+<div id="about">
+  <h2>About Us</h2>  
+  <p class="quote">"Our promise is to bring you nutritional food, using fresh, local, and organic product. Our purpose is to provide good food so you have more time for yourself, your family, and friends."</p>
+  <h3 class="quote">Our Farmers and Local Suppliers</h3>
+    <div id="farms">
+  <ul>
+    <li>Kirsop Farms - Carrots</li>
+    <li>Nash - Brussel Sprouts</li>
+    <li>NuFlour - GF Flour</li>
+  </ul>
+   </div>
+</div>        
+   
+   </div>
+      </div>
+      
+      <footer>
+        <div id="contact">
+         <h2>Contact</h2> 
+          <p>Jerry Baxter</p>
+          <p>206-555-5555</p>
+          <p><a href="mailto:valenteg@seattleu.com">Email</a></p>
+          <p><a href="https://www.facebook.com/gotsoup">Follow us on Facebook!</a></p>
+          <p>Made by Gia Valente in 2017. This page is for educational practice only and uses text and branding from <a href="gotsoupseattle.com">Got Soup?</a></p>
+        </div>
+        
+      </footer>
+ 
+        <!-- /container -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/vendor/jquery.validate.min.js"></script>
+
+    </body>
+</html>
